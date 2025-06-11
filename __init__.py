@@ -4,7 +4,7 @@ from urllib.request import urlopen
 from werkzeug.utils import secure_filename
 import sqlite3
 
-app = Flask(name)
+app = Flask(_name_)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'  # Clé secrète pour les sessions
 
 DATABASE_PATH = 'database.db'  # ✅ Constante pour le chemin de la base de données
@@ -71,5 +71,5 @@ def enregistrer_client():
     conn.close()
     return redirect('/consultation/')
 
-if name == "main":
+if _name_ == "_main_":
     app.run(debug=True)
